@@ -1,0 +1,34 @@
+[
+    {
+    "title": "Interstellar",
+    "duration": 169,
+    "rating": 8.6,
+    "year": 2014,
+    "genre": "Sci-Fi",
+    "poster": "https://upload.wikimedia.org/wikipedia/en/b/bc/Interstellar_film_poster.jpg"
+  },
+  {
+    "title": "Whiplash",
+    "duration": 106,
+    "rating": 8.5,
+    "year": 2014,
+    "genre": "Drama",
+    "poster": "https://play-lh.googleusercontent.com/vqhJjzxQHJFB52ceg9PkCydb2d7LRMec84ad1okmVduu03V539DiD8SxALWxpunWaNQ"
+  },
+  {
+    "title": "Spider-Man: Into the Spider-Verse",
+    "duration": 117,
+    "rating": 8.4,
+    "year": 2018,
+    "genre": "Animation",
+    "poster": "https://m.media-amazon.com/images/M/MV5BMjMwNDkxMTgzOF5BMl5BanBnXkFtZTgwNTkwNTQ3NjM@._V1_.jpg"
+  },
+  {
+    "title": "Dune",
+    "duration": 155,
+    "rating": 8.0,
+    "year": 2021,
+    "genre": "Adventure",
+    "poster": "https://m.media-amazon.com/images/M/MV5BNWIyNmU5MGYtZDZmNi00ZjAwLWJlYjgtZTc0ZGIxMDE4ZGYwXkEyXkFqcGc@._V1_QL75_UY281_CR0,0,190,281_.jpg"
+  }
+]
