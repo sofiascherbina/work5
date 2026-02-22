@@ -32,10 +32,10 @@
     animation: logo-spin infinite 20s linear;
   }
 }
-/* body{
+body{
     background-color: #333333;
 
-} */
+}
 .cardList{
   display: flex;
   flex-wrap: wrap;
@@ -116,4 +116,27 @@
 .table-items{
   color: #888;
   border: 1px solid  #666666;
+}
+.circle{
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+}
+
+.online{
+  background-color: darkgreen;
+}
+.offline{
+  background-color: crimson;
+}
+
+.friend-list{
+  color: white;
+  list-style-type: none;
+}
+.friend{
+  display: flex;
+  margin-bottom: 10px;
+  gap: 20px;
+  color: white;
 }

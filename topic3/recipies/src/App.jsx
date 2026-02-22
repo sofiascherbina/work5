@@ -11,7 +11,8 @@ import FriendList from './homework/friends/FriendList';
 import friends from './homework/friends/friends.json';
 import TransactionHistory from './homework/transactions/TransactionHistory';
 import transactions from './homework/transactions/transactions.json';
-import './App.css'
+import './App.module.css'
+
 
 function App() {
 
@@ -27,8 +28,8 @@ function App() {
         stats={user.stats}
       /> */}
       {/* <Statistics title="Upload stats" stats={data} />; */}
-      {/* <FriendList friends={friends} /> */}
-      <TransactionHistory items={transactions} />;
+      <FriendList friends={friends} />
+      {/* <TransactionHistory items={transactions} />; */}
     </>
   )
 }

@@ -3,7 +3,7 @@ export default function  RecipeInfo({name,time,servings, calories, difficulty,im
     return (
     <>
     <li className="card">
-        <h3>Name : {name}</h3>
+        <h3 style={{color:" #888"}}>Name : {name}</h3>
         <p>Time : {time}</p>
         <p>Servings : {servings}</p>
         <p>Calories : {calories}</p>

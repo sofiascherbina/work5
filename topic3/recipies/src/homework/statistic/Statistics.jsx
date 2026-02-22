@@ -1,3 +1,4 @@
+import Alert from "../Alert";
 export default function Statistics({title,stats}){
     return (
         <section className="statistics">
@@ -9,6 +10,7 @@ export default function Statistics({title,stats}){
                 <span className="percentage">{stat.percentage}%</span>
               </li>))}
             </ul>
+            < Alert text="Billie's the best" type="success"/>
         </section>
     )
 }
