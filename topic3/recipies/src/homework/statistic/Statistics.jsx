@@ -1,16 +1,17 @@
-import Alert from "../Alert";
+// import Alert from "../Alert";
+import './style.css';
 export default function Statistics({title,stats}){
     return (
         <section className="statistics">
             <h2 className="title">{title}</h2>
 
             <ul className="stat-list">
-                {stats.map(stat => (<li className="item">
+                {stats.map(stat => (<li className="item" style={{backgroundColor:stat.backgroundColor}}>
                 <span className="label">{stat.label}</span>
                 <span className="percentage">{stat.percentage}%</span>
               </li>))}
             </ul>
-            < Alert text="Billie's the best" type="success"/>
+            {/* < Alert text="Billie's the best" type="success"/> */}
         </section>
     )
 }

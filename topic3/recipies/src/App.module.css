@@ -67,9 +67,7 @@ body{
   padding: 50px 30px;
   color: azure;
 }
-.avatar{
-  border-radius: 50px;
-}
+
 .stats{
   list-style-type: none;
   display: flex;
@@ -84,26 +82,6 @@ body{
   border-radius: 25px;
 }
 
-.statistics{
-  width: 500px;
-  color: white;
-}
-.title{
-  text-align: center;
-  color: #333333;
-}
-.stat-list{
-  list-style-type: none;
-  display: flex;
-}
-.item{
-  background-color: crimson;
-  width: 200px;
-  height: 50px;
-  border: 1px solid palegreen;
-  padding-top: 10px;
-}
-
 .transaction-history{
   width: 500px;
   border: 1px solid  #666666;
@@ -116,27 +94,4 @@ body{
 .table-items{
   color: #888;
   border: 1px solid  #666666;
-}
-.circle{
-  border-radius: 50%;
-  width: 20px;
-  height: 20px;
-}
-
-.online{
-  background-color: darkgreen;
-}
-.offline{
-  background-color: crimson;
-}
-
-.friend-list{
-  color: white;
-  list-style-type: none;
-}
-.friend{
-  display: flex;
-  margin-bottom: 10px;
-  gap: 20px;
-  color: white;
 }
