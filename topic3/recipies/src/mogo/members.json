@@ -1,0 +1,23 @@
+[
+  {
+    "id": 1,
+    "name": "Matthew Dix",
+    "role": "Graphic Design",
+    "image": "/img/first-man.png",
+    "alt": "Matthew Dix"
+  },
+  {
+    "id": 2,
+    "name": "Christopher Campbell",
+    "role": "Branding/UX design",
+    "image": "/img/second-man.png",
+    "alt": "Christopher Campbell"
+  },
+  {
+    "id": 3,
+    "name": "Michael Fertig",
+    "role": "Developer",
+    "image": "/img/third-man.png",
+    "alt": "Michael Fertig"
+  }
+]

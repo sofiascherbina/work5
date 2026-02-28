@@ -1,4 +1,4 @@
-export default function MogoMain(){
+export default function MogoMain({members}){
     return (
     <main>
         <section>
@@ -36,21 +36,11 @@ export default function MogoMain(){
     <h1> MEET OUR TEAM</h1>
     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
 <ul>
-    <li>
-        {/* <img src="" alt="Matthew Dix"> */}
-        <h5>Matthew Dix</h5>
-        <p>Graphic Design</p>
-    </li>
-    <li>
-        {/* <img src="" alt="Christopher Campbell"> */}
-        <h5>Christopher Campbell</h5>
-        <p>Branding/UX design</p>
-    </li>
-    <li>
-        {/* <img src={} alt="Michael Fertig"> */}
-        <h5>Michael Fertig</h5>
-        <p>Developer</p>
-    </li>
+    {members.map(member => (<li key={member.id}>
+        <img src={member.image} alt={member.alt}/>
+        <h5>{member.name}</h5>
+        <p>{member.role}</p>
+    </li>))}
 </ul>
 </section>
 </main>

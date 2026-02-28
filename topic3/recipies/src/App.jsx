@@ -11,6 +11,7 @@ import FriendList from './homework/friends/FriendList';
 import friends from './homework/friends/friends.json';
 import TransactionHistory from './homework/transactions/TransactionHistory';
 import transactions from './homework/transactions/transactions.json';
+import Mogo from './mogo/Mogo';
 import './App.module.css'
 
 
@@ -28,8 +29,11 @@ function App() {
         stats={user.stats}
       /> */}
       {/* <Statistics title="Upload stats" stats={data} />; */}
-      <FriendList friends={friends} />
+      {/* <FriendList friends={friends} /> */}
       {/* <TransactionHistory items={transactions} />; */}
+
+
+      <Mogo/>
     </>
   )
 }
