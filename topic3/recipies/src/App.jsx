@@ -12,7 +12,7 @@ import friends from './homework/friends/friends.json';
 import TransactionHistory from './homework/transactions/TransactionHistory';
 import transactions from './homework/transactions/transactions.json';
 import Mogo from './mogo/Mogo';
-import './App.module.css'
+// import './App.module.css'
 
 
 function App() {
