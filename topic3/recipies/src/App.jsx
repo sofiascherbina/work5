@@ -18,7 +18,7 @@ function App() {
 
   return (
     <>
-      {/* <Recipe recipe={recipe}/> */}
+      <Recipe recipe={recipe}/>
       {/* <MovieList movies={movies}/> */}
       {/* <Profile
         username={user.username}

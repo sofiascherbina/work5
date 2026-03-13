@@ -4,11 +4,13 @@ import RecipeInfo from "./RecipeInfo";
 
 const List = styled.ul `
   display: flex;
-  flex-wrap: wrap;
-  gap: 200px;
-  width: 1000px;
-  margin: 50px 250px;
-  padding : 0; `
+  gap: 20px;
+  width: 1600px;
+  background-color: #fff9ae;
+  margin: 0 0 0 40px;
+  height:auto;
+  padding : 15px 20px;
+  list-style-type:none; `
 
 export default function Recipe({recipe}){
     return (
