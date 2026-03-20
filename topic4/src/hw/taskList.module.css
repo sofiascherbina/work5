@@ -1,0 +1,40 @@
+.taskList{
+    margin: 20px auto;
+    padding: 15px;
+    width: 500px;
+}
+.taskList li {
+    margin-bottom: 15px;
+}
+.deleteBtn{
+    width: 100px;
+    height: 25px;
+    margin-top: 10px;
+    border: none;
+    border-radius: 25px;
+}
+.deleteBtn:hover{
+    background-color: #d72d27;
+    border: 1px solid white;
+    color: white;
+}
+.addingCont{
+    display: flex;
+    margin-left: 50px;
+    gap: 50px;
+}
+.input{
+    width: 250px;
+    height: 25px;
+}
+.addBtn{
+    width: 200px;
+    height: 25px;
+     border: none;
+    border-radius: 25px;
+}
+.addBtn:hover{
+    background-color: #5B841E;
+    border: 1px solid white;
+    color: white;
+}
