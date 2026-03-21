@@ -29,7 +29,7 @@ export default function TaskList(){
                     }} className={css.deleteBtn}>Delete task</button>
                 </li>))}</ul>
                 <div className={css.addingCont}>
-                     <input type="text" value={value} onChange={txt => setValue(txt.target.value)} className={css.input} placeholder="Tipe ur task"/>
+                     <input type="text" value={value} onChange={txt => setValue(txt.target.value)} className={css.input} placeholder="Type ur task"/>
                     <button onClick={addTask} className={css.addBtn}>Add task</button>
                 </div>
         </>
