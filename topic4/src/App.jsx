@@ -7,6 +7,8 @@ import Event from './Event';
 import Counter from './Counter';
 import ToggleButton from './ToggleButton';
 import TaskList from './hw/TaskList';
+import FirstComponent from './FirstComponent copy';
+import FeedBack from './hw/FeedBack';
 import './App.css'
 
 function App() {
@@ -16,8 +18,10 @@ function App() {
      {/* <Greetings name="Hina"/>
      <Event/>
      <Counter/> */}
-     <ToggleButton/>
+     {/* <ToggleButton/> */}
      {/* <TaskList/> */}
+     {/* <FirstComponent/> */}
+     <FeedBack/>
     </>
   )
 }
