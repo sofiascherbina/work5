@@ -17,7 +17,7 @@ export default function SignUpForm(){
         evt.preventDefault();
         console.log(`password : ${state.password} email: ${state.email}`)
         if(state.password.length !== 6){
-             alert('password can contain only 6 symbols');
+             alert('password may contain only 6 symbols');
              return
         }
         if (!state.email.includes('@')){

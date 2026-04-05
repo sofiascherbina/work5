@@ -1,0 +1,26 @@
+.studData {
+    width: 300px;
+    margin: 20px auto;
+}
+.studData input{
+    width: 250px;
+    height: 30px;
+    border-radius: 25px;
+    margin-bottom: 20px;
+    padding-left: 15px;
+}
+.studCourse label{
+    margin-right: 15px;
+}
+.submitBtn{
+    width: 220px;
+    height: 30px;
+    border-radius: 25px;
+    border: none;
+    padding: 5px;
+    margin-top: 50px;
+    text-align: center;
+}
+.submitBtn:hover{
+    background-color: #d896ff;
+}
