@@ -25,6 +25,13 @@ export default function TaskList(){
         let checkedArr = localStorage.getItem("tasks");
         return checkedArr ? JSON.parse(checkedArr) : tasksArr;
     });
+    const [filter, setFilter] = useState("all");
+    const filteredTasks = tasks.filter(task =>{
+        if(filter === 'done') return task.done;
+        if(filter === 'unfinished') return !task.done;
+        return true;
+    });
+
     const [value, setValue] = useState("");
     function addTask(){
         let newTask = {
@@ -48,9 +55,9 @@ export default function TaskList(){
       localStorage.setItem('tasks', JSON.stringify(completedTaks));
     }
     return(
-        <>
+        <div className={css.taskContainer}>
         <h1 className={css.title}>Task List</h1>
-        <ul className={css.taskList}>{tasks.map( task =>(<li key={task.id}>
+        <ul className={css.taskList}>{filteredTasks.map( task =>(<li key={task.id}>
                     <input type="checkbox" checked={task.done} onChange={() =>changeStatus(task.id)}/>
                     <p>{task.text}</p>
                     <button onClick={()=>{
@@ -63,6 +70,17 @@ export default function TaskList(){
                      <input type="text" value={value} onChange={txt => setValue(txt.target.value)} className={css.input} placeholder="Type ur task"/>
                     <button onClick={addTask} className={css.addBtn}>Add task</button>
                 </div>
-        </>
+        <ul className={css.filterList}>
+            <li><label>
+                <input type="radio" name="filter" checked={filter === "all"} onChange={()=> setFilter("all")}/>
+                All</label></li>
+            <li><label>
+                <input type="radio" name="filter" checked={filter === "done"} onChange={()=> setFilter("done")}/>
+                Done</label></li>
+            <li><label>
+                <input type="radio" name="filter" checked={filter === "unfinished"} onChange={()=> setFilter("unfinished")}/>
+                Unfinished</label></li>
+        </ul>
+        </div>
     )
 }
