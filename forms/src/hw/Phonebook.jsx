@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { nanoid } from 'nanoid';
+import css from "./phonebook.module.css";
 
 const DeleteIc=()=>{
     return(
@@ -36,17 +37,25 @@ export default function Phonebook(){
     }
     const createContact =(evt)=>{
         evt.preventDefault();
+        
         const newContact ={
             id: nanoid(),
             name:state.name,
             number:state.number
         }
-        setState(prev=>({
+        const added = state.contacts.find(cont => cont.name.toLowerCase()=== newContact.name.toLowerCase());
+        if(added){
+            return alert (`${newContact.name} is alreday in contacts.`)
+        }
+        else{
+             setState(prev=>({
             contacts:[...prev.contacts, newContact],
             name:"",
             number:"",
             filter:""
         }));
+        }
+        
     }
     // const handleFilter=(evt)=>{
     //         let filteredArr = state.contacts.filter(contact=>contact.name.toLowerCase().includes(evt.toLowerCase()))
@@ -63,9 +72,9 @@ export default function Phonebook(){
     return(
         <>
         <h1>Phonebook</h1>
-        <form onSubmit={createContact}>
+        <form onSubmit={createContact} className={css.form}>
         <label>
-            Name
+            Name:
             <input
                 type="text"
                 name="name"
@@ -76,7 +85,7 @@ export default function Phonebook(){
                 onChange={handleChange}/>
         </label>
         <label>
-            Number
+            Number:
             <input
                 type="tel"
                 name="number"
@@ -86,12 +95,13 @@ export default function Phonebook(){
                 value={state.number}
                 onChange={handleChange}/>
         </label>
-        <button type="submit">Add contact</button>
+        <button type="submit" className={css.addBtn}>Add contact</button>
         </form>
         <div>
             <h1>Contacts</h1>
-            <input type="text" name="filter" value={state.filter} onChange={handleChange}/>
-            <ul>
+            <p>Find contact by name :</p>
+            <input type="text" name="filter" value={state.filter} onChange={handleChange} className={css.filter} placeholder="Find..."/>
+            <ul className={css.contactsList}>
                 {visibleContacts.map(contact=>(<li key={contact.id}>
                     <p>{contact.name} : <span>{contact.number}</span></p>
                     <button onClick={()=>{
@@ -102,7 +112,7 @@ export default function Phonebook(){
                             number: '',
                             filter:""
                         })
-                    }}><DeleteIc/></button>
+                    }} className={css.deleteBtn}><DeleteIc/></button>
                 </li>))}
             </ul>
         </div>
