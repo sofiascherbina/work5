@@ -5,6 +5,7 @@ import heroImg from './assets/hero.png'
 import SignUpForm from './singUp/signUp'
 import Attendance from './attendance/Attendance'
 import Phonebook from './hw/Phonebook'
+import SignUpSec from './signUpSec/signUpSec'
 import './App.css'
 
 function App() {
@@ -12,7 +13,8 @@ function App() {
     <>
       {/* <SignUpForm/> */}
       {/* <Attendance/> */}
-      <Phonebook/>
+      {/* <Phonebook/> */}
+      <SignUpSec/>
     </>
   )
 }

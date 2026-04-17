@@ -1,0 +1,26 @@
+.form{
+    width: 500px;
+    height: 200px;
+    margin: 20px auto;
+    border-radius: 25px;
+    border: 1px solid white;
+    padding: 50px 15px;
+}
+.formInput{
+    display: flex;
+    gap: 15px;
+    margin-bottom: 50px;
+}
+.formInput input{
+    width: 300px;
+}
+.submitBtn{
+    width: 450px;
+    height: 50px;
+    color: white;
+    border-radius: 25px;
+    background-color: #999999;
+}
+.submitBtn:hover{
+    background-color: #777777;
+}

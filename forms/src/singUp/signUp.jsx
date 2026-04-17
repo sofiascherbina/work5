@@ -40,6 +40,10 @@ export default function SignUpForm(){
             </ul>
             <button type="submit" className={css.submitBtn}>Sign up</button>
         </form>
+        <div>
+            <p>Your email : {state.email}</p>
+            <p>Your name : {state.password}</p>
+        </div>
         </>
     )
 }
