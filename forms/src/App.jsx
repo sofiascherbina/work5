@@ -6,6 +6,7 @@ import SignUpForm from './singUp/signUp'
 import Attendance from './attendance/Attendance'
 import Phonebook from './hw/Phonebook'
 import SignUpSec from './signUpSec/signUpSec'
+import Todolist from './todolist/Todolist'
 import './App.css'
 
 function App() {
@@ -14,7 +15,8 @@ function App() {
       {/* <SignUpForm/> */}
       {/* <Attendance/> */}
       {/* <Phonebook/> */}
-      <SignUpSec/>
+      {/* <SignUpSec/> */}
+      <Todolist/>
     </>
   )
 }
