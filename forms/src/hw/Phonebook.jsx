@@ -16,17 +16,23 @@ const DeleteIc=()=>{
     )
 }
 
+const numberArr =  [
+    {id: '1', name: 'Rosie Simpson', number: '459-12-56'},
+    {id: '2', name: 'Hermione Kline', number: '443-89-12'},
+    {id: '3', name: 'Eden Clements', number: '645-17-79'},
+    {id: '4', name: 'Annie Copeland', number: '227-91-26'}
+]
+
 export default function Phonebook(){
-    const [state, setState] = useState({
-        contacts: [
-            {id: '1', name: 'Rosie Simpson', number: '459-12-56'},
-            {id: '2', name: 'Hermione Kline', number: '443-89-12'},
-            {id: '3', name: 'Eden Clements', number: '645-17-79'},
-            {id: '4', name: 'Annie Copeland', number: '227-91-26'}
-        ],
+    const [state, setState] = useState(()=>{
+        let savedNumbers = localStorage.getItem('contacts');
+        console.log(JSON.parse(savedNumbers))
+    return {
+        contacts: savedNumbers ? JSON.parse(savedNumbers) : numberArr,
         name: '',
         number: '',
         filter:""
+    }
     });
     const handleChange =(evt)=>{
         const {name,value} = evt.target
@@ -43,29 +49,23 @@ export default function Phonebook(){
             name:state.name,
             number:state.number
         }
-        const added = state.contacts.find(cont => cont.name.toLowerCase()=== newContact.name.toLowerCase());
+        const added = state.contacts.find(cont => cont.number.toLowerCase()=== newContact.number.toLowerCase());
         if(added){
             return alert (`${newContact.name} is alreday in contacts.`)
         }
         else{
-             setState(prev=>({
-            contacts:[...prev.contacts, newContact],
-            name:"",
-            number:"",
-            filter:""
-        }));
-        }
-        
+             setState(prev=>{
+                let newArr = [...prev.contacts, newContact];
+                localStorage.setItem('contacts', JSON.stringify(newArr))
+                return {
+                    contacts:newArr,
+                    name:"",
+                    number:"",
+                    filter:""
+                }
+             });
+        }   
     }
-    // const handleFilter=(evt)=>{
-    //         let filteredArr = state.contacts.filter(contact=>contact.name.toLowerCase().includes(evt.toLowerCase()))
-    //         setState({
-    //                 contacts:filteredArr,
-    //                 name: '',
-    //                 number: '',
-    //                 filter:""
-    //         })
-    // }
     const visibleContacts = state.contacts.filter(contact =>
         contact.name.toLowerCase().includes(state.filter.toLowerCase())
     );
@@ -112,6 +112,7 @@ export default function Phonebook(){
                             number: '',
                             filter:""
                         })
+                        localStorage.setItem('contacts', JSON.stringify(filteredArr))
                     }} className={css.deleteBtn}><DeleteIc/></button>
                 </li>))}
             </ul>

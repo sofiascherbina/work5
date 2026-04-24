@@ -14,9 +14,9 @@ function App() {
     <>
       {/* <SignUpForm/> */}
       {/* <Attendance/> */}
-      {/* <Phonebook/> */}
+      <Phonebook/>
       {/* <SignUpSec/> */}
-      <Todolist/>
+      {/* <Todolist/> */}
     </>
   )
 }
