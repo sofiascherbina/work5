@@ -5,6 +5,7 @@ import heroImg from './assets/hero.png'
 import Article from './Article'
 import User from './users/Users'
 import Articles from './articles/Articles'
+import GifSearch from './gifs/Gifs'
 import './App.css'
 
 function App() {
@@ -12,7 +13,8 @@ function App() {
     <>
       {/* <Article/> */}
       {/* <User/> */}
-      <Articles/>
+      {/* <Articles/> */}
+      <GifSearch/>
     </>
   )
 }

@@ -1,0 +1,25 @@
+.container{
+    padding: 100px 20px 0;
+}
+.search{
+    width: 400px;
+    height: 30px;
+    margin: 20px;
+    border-radius: 25px;
+}
+.gifsList{
+    list-style-type: none;
+    display: flex;
+    padding: 15px;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    border-top: 1px solid white;
+}
+.loadMore{
+    width: 100%;
+    height: 50px;
+    border-radius: 25px;
+    border: 2px solid white;
+    margin: 50px 0;
+}
