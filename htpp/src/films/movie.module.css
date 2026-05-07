@@ -1,0 +1,77 @@
+.container{
+    position: relative;
+}
+.movieSearch{
+    display: flex;
+    justify-content: space-evenly;
+    gap: 30px;
+    width: 1000px;
+    margin: 50px auto;
+}
+.movieSearch input{
+    width: 800px;
+    height: 30px;
+    border-radius: 15px;
+    border: 2px solid #baabc9;
+    padding-left: 25px;
+    color: #baabc9;
+}
+.movieSearch button{
+    background-color: #7a5c8d;
+    border: none;
+    border-radius: 10px;
+}
+.movieSearch button:hover{
+    background-color: #9d74b0;
+}
+.movieSearch button:focus{
+    border: 1px solid white;
+}
+
+.movieList{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    width: 1050px;
+    padding: 15px;
+    margin: 30px;
+    list-style-type: none;
+    border-top: 1px solid #baabc9;
+}
+.movieList li{
+    width: 300px;
+    margin: 50px 0;
+    transition: transform 0.3s ease;
+    border-bottom: 1px solid #baabc9;
+    border-radius: 10px;
+}
+.movieList li:hover{
+    transform: scale(1.05)
+}
+.navBtn{
+    display: flex;
+    width: 1000px;
+    padding: 0 50px;
+    margin: 50px 0;
+    justify-content: space-evenly;
+}
+.navBtn button{
+    width: 200px;
+    height: 30px;
+    background-color: #9d74b0;
+    transition: transform 0.3s ease;
+    border: none;
+    border-radius: 15px;
+}
+.navBtn button:hover{
+    transform: scale(1.05);
+    background-color: #c7a3d4;
+}
+
+.modalContainet{
+    position: absolute;
+    top: 50px;
+    left: 100px;
+    width: 1000px;
+    background-color: rgba((#5b5b5b), 0.9);
+}
