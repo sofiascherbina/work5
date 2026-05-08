@@ -68,10 +68,56 @@
     background-color: #c7a3d4;
 }
 
-.modalContainet{
-    position: absolute;
-    top: 50px;
-    left: 100px;
+.modalContainer{
+    position: fixed;
+    inset: 0;
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+.modalContent{
+    position: relative;
     width: 1000px;
-    background-color: rgba((#5b5b5b), 0.9);
+    max-width: 90%;
+    height: 600px;
+    background-color: 	#555555;
+    padding: 20px 40px;
+    border-radius: 25px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+.modalInfo{
+    display: flex;
+    gap: 50px;
+}
+.modalPoster{
+    margin-top: 20px;
+    box-shadow: 5px 10px 20px rgba(0, 0, 0, 0.5);
+    height: 460px;
+}
+.modalList{
+    list-style-type: none;
+    margin-top: 30px;
+    padding: 20px;
+    text-align: start;
+    border-left: 3px solid #baabc9;
+    height: 400px;
+}
+.modalList li{
+    margin-bottom: 20px;
+}
+.closeBtn{
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 50px;
+    height: 40px;
+    transition: transform 0.3s ease;
+    border: none;
+    border-radius: 15px;
+}
+.closeBtn:hover{
+    transform: scale(1.05);
+    background-color: #c7a3d4;
 }
