@@ -1,0 +1,28 @@
+.search{
+    width: 700px;
+    height: 30px;
+    margin: 20px auto;
+    border-radius: 25px;
+    padding: 0 30px;
+}
+.imagesList{
+    display: flex;
+    gap: 30px;
+    flex-wrap: wrap;
+    list-style-type: none;
+}
+.imagesList li{
+    transition: transform 0.3s ease;
+}
+.imagesList li img{
+    border-radius: 25px;
+}
+.imagesList li:hover{
+    transform: scale(1.05);
+}
+.loadMore{
+    width: 700px;
+    height: 30px;
+    margin: 50px auto;
+    border-radius: 25px;
+}

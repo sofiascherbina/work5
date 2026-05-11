@@ -7,6 +7,7 @@ import User from './users/Users'
 import Articles from './articles/Articles'
 import GifSearch from './gifs/Gifs'
 import MovieSearch from './films/MovieSearch'
+import SearchImages from '../../htpp/src/images/ImageSearch'
 import './App.css'
 
 function App() {
@@ -16,7 +17,8 @@ function App() {
       {/* <User/> */}
       {/* <Articles/> */}
       {/* <GifSearch/> */}
-      <MovieSearch/>
+      {/* <MovieSearch/> */}
+      <SearchImages/>
     </>
   )
 }
