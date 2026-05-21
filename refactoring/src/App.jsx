@@ -7,13 +7,15 @@ import LikeButton from './Refactoring'
 import TaskList from './Refactoring'
 import KeyTracker from './Refactoring'
 import Timer from './Timer'
+import Users from './Users'
+import Posts from './Posts'
 
 function App() {
-  const [count, setCount] = useState(0)
+
 
   return (
     <>
-    <Timer/>
+    <Posts/>
     </>
   )
 }

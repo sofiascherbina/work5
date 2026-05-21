@@ -5,17 +5,42 @@ export default function Users (){
         users: [],
         query: "",
         loading: false,
-        IntervalId:setInterval(() => {
-            this.fetchUsers();
-        }, 5000)
+        // IntervalId:setInterval(() => {
+        //     fetchUsers();
+        // }, 5000)
     });
+    useEffect(()=>{
+      fetchUsers();
+      const intervalId = setInterval(() => {
+          fetchUsers();
+        }, 5000);
+
+      return () => {
+          clearInterval(intervalId);
+      };
+    }, [user.query])
     useEffect(()=>{
         localStorage.setItem("users", JSON.stringify(user.users));
     },[user.users]);
 
     const fetchUsers=()=>{
+      setUser(prev=>({...prev, loading:true}));
 
+       setTimeout(() => {
+      const data = [
+        { id: 1, name: "John" },
+        { id: 2, name: "Anna" },
+        { id: 3, name: "Mike" },
+      ].filter(u =>
+        u.name.toLowerCase().includes(user.query.toLowerCase())
+      );
+
+      setUser(prev =>({ ...prev, users: data, loading: false }));
+    }, 500);
     }
+    const handleChange = (e) => {
+      setUser(prev=>({ ...prev,query: e.target.value }));
+    };
     return(
         <div>
             <input
@@ -27,8 +52,8 @@ export default function Users (){
             {user.loading && <p>Loading...</p>}
 
             <ul>
-              {user.users.map(user => (
-                <li key={user.id}>{user.name}</li>
+              {user.users.map(u => (
+                <li key={u.id}>{u.name}</li>
               ))}
             </ul>
       </div>
