@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import css from "./feedBack.module.css";
 export default function FeedBack(){
     const [state, setState] = useState({
@@ -33,8 +33,10 @@ export default function FeedBack(){
             ...prev,
             neutral : prev.neutral + 1
          }))
-        countTotalFeedback();
-        countPositiveFeedbackPercentage();
+         useEffect(()=>{
+            countTotalFeedback();
+            countPositiveFeedbackPercentage();
+         },[])
     }
      const handlerBad =() => {
          setState(prev=>({

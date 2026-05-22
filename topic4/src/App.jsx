@@ -19,9 +19,9 @@ function App() {
      <Event/>
      <Counter/> */}
      {/* <ToggleButton/> */}
-     <TaskList/>
+     {/* <TaskList/> */}
      {/* <FirstComponent/> */}
-     {/* <FeedBack/> */}
+     <FeedBack/>
     </>
   )
 }
