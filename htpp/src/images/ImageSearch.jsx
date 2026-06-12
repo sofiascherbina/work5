@@ -3,6 +3,7 @@ import { Component } from "react";
 import axios from "axios";
 import css from './images.module.css';
 axios.defaults.baseURL='https://pixabay.com/api'
+import ModalImage from "./ModalImage";
 
 export default class SearchImages extends Component{
     state={
@@ -11,7 +12,8 @@ export default class SearchImages extends Component{
         error:null,
         page:1,
         search:"",
-        disable:true
+        disable:true,
+        selectedImage:null
     }
     handleChange=(evt)=>{
         const {name, value} = evt.target
@@ -44,20 +46,31 @@ export default class SearchImages extends Component{
             page:prev.page+1
         }))
     }
+    openModal=(image)=>{
+        this.setState({
+            selectedImage:image
+        })
+    }
+     closeModal=()=>{
+        this.setState({
+            selectedImage:null
+        })
+    }
     render(){
-        const {images, loading, error, search,disable} = this.state;
+        const {images, loading, error, search,disable, selectedImage} = this.state;
 
         return(
             <>
                 <input type="text" name="search" value={search} onChange={this.handleChange} className={css.search}/>
                 {error && <p>Halepa!</p>}
-                <SearchList images={images}/>
+                <SearchList images={images} openModal={this.openModal}/>
                 {loading && <p>Loading...</p>}
                 <button onClick={this.handleLoadMore} className={css.loadMore} 
                     style={{display: disable
                      ? 'none'
                      : 'block'       
                 }}>Load more</button>
+                {selectedImage && <ModalImage imageSrc={selectedImage} onClose={this.closeModal}/>}
             </>
         )
     }
