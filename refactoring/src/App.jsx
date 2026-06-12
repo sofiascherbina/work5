@@ -9,13 +9,15 @@ import KeyTracker from './Refactoring'
 import Timer from './Timer'
 import Users from './Users'
 import Posts from './Posts'
+import Appbar from './components/AppBar/AppBar'
 
 function App() {
 
 
   return (
     <>
-    <Posts/>
+    {/* <Appbar/> */}
+
     </>
   )
 }

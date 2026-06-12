@@ -8,8 +8,10 @@ import Player from './Player'
 import Focus from './Focus'
 import Counter from './Counter'
 import Filter from './memo/Filter'
+import Task from './callback/Task'
 
 import Count from './memo/Count'
+import Cart from './callback/Cart'
 
 function App() {
   // const firstUser = {
@@ -22,8 +24,11 @@ function App() {
   return (
     <>
     {/* <Focus/> */}
-    <Count/>
+    {/* <Count/>
     <Filter/>
+    <Task/> */}
+    <Cart/>
+
       {/* <UserContext.Provider value={firstUser}>
         <Profile/>
       </UserContext.Provider> */}
